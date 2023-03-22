@@ -28,10 +28,10 @@ SecureLink is a link shortener that gives you full control over your links. You 
 2. You can enter your custom path name like 'github' or 'twitter', or you can generate a random path name by clicking on the "randomize" button.
 
 3. You can choose other additional options for extra security of your sharable link like:
-- Password: You can make your link protected and add a password. It will decrypt your destination URL so no one can access it without a password.
-- View once: You can turn on this feature to make the user view the link only once. After that, the link will be destroyed automatically and no one can access it again.
-- Click limit: You can set a limit on the number of clicks to avoid misuse of your link.
-- Expiration time: You can set an expiration time limit up to 30 minutes after which the link will be destroyed automatically.
+- **Password** : You can make your link protected and add a password. It will decrypt your destination URL so no one can access it without a password.
+- **View once**: You can turn on this feature to make the user view the link only once. After that, the link will be destroyed automatically and no one can access it again.
+- **Click limit**: You can set a limit on the number of clicks to avoid misuse of your link.
+- **Expiration time**: You can set an expiration time limit up to 30 minutes after which the link will be destroyed automatically.
 
 
 4. After adding all these, click on the "Generate link" button. It will take 3-5 seconds, and after that, you will see all your generated links in the featured section. (Non-working links destroy automatically after their expire time.)
