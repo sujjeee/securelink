@@ -1,38 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [Securelink](https://securelink.vercel.app/)- Securely Share Your Links with Custom Access Controls 🔗🔐
 
-## Getting Started
+<kbd>
+<a href="https://securelink.vercel.app/">
+  <img src="https://securelink.vercel.app/website.png" />
+</a>
+</kbd>
 
-First, run the development server:
+## Introduction
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+SecureLink is a link shortener that gives you full control over your links. You can customize your short links according to your preferences, protect them with a password to keep them secure, and delete them automatically after a single view to enhance security. You can also limit the number of clicks on your link for added security, set an expiration time for your links, and encrypt your destination link before saving it to the server for enhanced privacy.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Features
+- Customize your short links according to your preferences
+- Protect your links with a password to keep them secure
+- Delete the link automatically after a single view to enhance security
+- Limit the number of clicks on your link for added security
+- Set an expiration time for your links, after which they will become inactive
+- Encrypt your destination link before saving it to the server for enhanced privacy
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Usage
+1. Enter the destination link you want to shorten in the input box.
 
-To learn more about Next.js, take a look at the following resources:
+2. You can enter your custom path name like 'github' or 'twitter', or you can generate a random path name by clicking on the "randomize" button.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. You can choose other additional options for extra security of your sharable link like:
+- **Password** : You can make your link protected and add a password. It will decrypt your destination URL so no one can access it without a password.
+- **View once**: You can turn on this feature to make the user view the link only once. After that, the link will be destroyed automatically and no one can access it again.
+- **Click limit**: You can set a limit on the number of clicks to avoid misuse of your link.
+- **Expiration time**: You can set an expiration time limit up to 30 minutes after which the link will be destroyed automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+4. After adding all these, click on the "Generate link" button. It will take 3-5 seconds, and after that, you will see all your generated links in the featured section. (Non-working links destroy automatically after their expire time.)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Copy the generated short link and share it with anyone you want.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Try it out
+Visit [securelink.vercel.app](https://securelink.vercel.app/) and start securing your links today!
