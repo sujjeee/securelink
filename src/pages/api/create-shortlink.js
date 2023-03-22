@@ -75,12 +75,14 @@ async function createShortLink(req, res) {
 
         // creating field to database
         if (!url) {
-            const checkShortId = await ShortUrl.findOne({ shortUrl: `http://${req.headers.host}/${shortId}` });
+
+            // if you want to use in localhost then turn 'https' to 'http' 
+            const checkShortId = await ShortUrl.findOne({ shortUrl: `https://${req.headers.host}/${shortId}` });
             if (checkShortId) {
                 return res.status(409).json({ success: false, message: 'Short URL is already taken' });
             }
 
-            const shortUrl = `http://${req.headers.host}/${shortId}`;
+            const shortUrl = `https://${req.headers.host}/${shortId}`;
             const destinationUrl = CryptoJS.AES.encrypt(originalUrl, process.env.NEXT_PUBLIC_NEXTAUTH_KEY).toString();
 
             url = await ShortUrl.create({

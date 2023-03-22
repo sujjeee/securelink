@@ -4,8 +4,10 @@ import CryptoJS from 'crypto-js'
 
 export async function getServerSideProps(context) {
     const { url } = context.params;
+    const hostName = context.req.headers.host;
 
-    const response = await fetch(`http://localhost:3000/api/redirect?link=http://localhost:3000/${url}`);
+    // if you want to use in localhost then turn 'https' to 'http' 
+    const response = await fetch(`https://${hostName}/api/redirect?link=https://${hostName}/${url}`);
     const data = await response.json();
 
     if (data.success === true) {
@@ -13,7 +15,7 @@ export async function getServerSideProps(context) {
             return {
                 props: {
                     requiresPassword: true,
-                    shortUrl: `http://localhost:3000/${url}`,
+                    shortUrl: `https://${hostName}/${url}`,
                 },
             };
         } else {
@@ -42,7 +44,7 @@ export default function Page({ shortUrl }) {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:3000/api/redirect', {
+            const response = await axios.post('/api/redirect', {
                 password,
                 shortUrl,
             });
@@ -66,7 +68,6 @@ export default function Page({ shortUrl }) {
         <main className="flex h-screen w-screen items-center justify-center ">
             <div className="w-full max-w-md overflow-hidden rounded-2xl border border-zinc-800 shadow-xl">
                 <div className="flex flex-col items-center justify-center space-y-3 border-b border-zinc-400 bg-[#0E1013] px-4 py-6 pt-8 text-center sm:px-16">
-                    <a href="https://dub.sh" target="_blank" rel="noreferrer"> </a>
                     <h3 className="text-xl font-semibold text-white">Password Required</h3>
                     <p className="text-sm text-gray-100">This link is password protected. Please enter the password to view it.</p>
                 </div>
