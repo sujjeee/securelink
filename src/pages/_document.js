@@ -9,6 +9,8 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="https://securelink.vercel.app/favicon.ico" />
+
         <meta name="description" content={description} />
 
         <meta property="og:site_name" content={sitename} />
