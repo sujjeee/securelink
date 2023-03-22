@@ -25,7 +25,7 @@ const SecurityForm = () => {
         password: "",
         viewOnce: false,
         readCount: 50,
-        expiresAt: 10
+        expiresAt: 5
     })
     const { originalUrl, shortId, protection, password, viewOnce, readCount, expiresAt } = urlData
     const setChanges = (e) => {
