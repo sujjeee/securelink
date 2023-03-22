@@ -8,6 +8,12 @@ import ShortLinks from '@/components/ShortLinks';
 import Head from 'next/head';
 
 const Home = () => {
+
+    let description = "SecureLink helps you protect your links online with custom settings and features.";
+    let ogimage = "https://securelink.vercel.app/website.png";
+    let sitename = "SecureLink";
+    let title = "SecureLink - Link Shortener with Security Features";
+
     const [urls, setUrls] = useState([]);
     const [filterUrls, setFilterUrls] = useState([])
     const localUrl = useSelector(state => state.localStorage);
@@ -57,7 +63,24 @@ const Home = () => {
         <>
             <Head>
                 <title>SecureLinks</title>
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+                <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+                <meta name="description" content={description} />
                 <meta name="google-site-verification" content="5z2lDnQ6mdG9S2qZm74DNfOk3xdwLR-orzDHc5XiJxs" />
+
+                <meta property="og:site_name" content={sitename} />
+                <meta property="og:image" content={ogimage} />
+                <meta property="og:description" content={description} />
+                <meta property="og:title" content={title} />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={ogimage} />
             </Head>
             <div>
                 <header className='border-b border-[#333333] sticky top-0  backdrop-blur-3xl z-50'>
