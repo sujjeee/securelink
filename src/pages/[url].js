@@ -65,8 +65,8 @@ export default function Page({ shortUrl }) {
     }
 
     return (
-        <main className="flex h-screen w-screen items-center justify-center ">
-            <div className="w-full max-w-md overflow-hidden rounded-2xl border border-zinc-800 shadow-xl">
+        <main className="flex h-[80vh] sm:h-screen w-screen items-center justify-center ">
+            <div className="w-full max-w-md overflow-hidden sm:rounded-2xl border border-zinc-800 shadow-xl">
                 <div className="flex flex-col items-center justify-center space-y-3 border-b border-zinc-400 bg-[#0E1013] px-4 py-6 pt-8 text-center sm:px-16">
                     <h3 className="text-xl font-semibold text-white">Password Required</h3>
                     <p className="text-sm text-gray-100">This link is password protected. Please enter the password to view it.</p>
